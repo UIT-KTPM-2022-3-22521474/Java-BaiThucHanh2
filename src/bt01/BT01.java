@@ -40,24 +40,23 @@ public class BT01 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		
+
 		String name = null;
 		do {
-		    name = JOptionPane.showInputDialog("Nhập tên của bạn: ");
-		    if (name == null) {
-		    	break;
-		    } else if (name.trim().isEmpty()) {
-		        JOptionPane.showMessageDialog(null, "Bạn chưa nhập tên!");
-		    }
+			name = JOptionPane.showInputDialog("Nhập tên của bạn: ");
+			if (name == null) {
+				break;
+			} else if (name.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Bạn chưa nhập tên!");
+			}
 		} while (name.trim().isEmpty());
-		
+
 		if (name != null) {
 			JLabel HelloNameLabel = new JLabel("Xin chào " + name + "!");
 			contentPane.add(HelloNameLabel);
 			contentPane.revalidate();
 			contentPane.repaint();
-		}
-		else {
+		} else {
 			System.exit(0);
 		}
 	}

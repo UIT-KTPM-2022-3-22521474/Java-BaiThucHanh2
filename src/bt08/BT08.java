@@ -43,24 +43,24 @@ public class BT08 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		
+
 		JButton ImageBtn = new JButton("Choose image file");
 		contentPane.add(ImageBtn);
-		
+
 		JLabel imageLabel = new JLabel("");
 		contentPane.add(imageLabel);
-		
+
 		ImageBtn.addActionListener(e -> {
 			JFileChooser fileChooser = new JFileChooser();
 			int returnValue = fileChooser.showOpenDialog(null);
 			if (returnValue == JFileChooser.APPROVE_OPTION) {
 				try {
-                    ImageIcon icon = new ImageIcon(fileChooser.getSelectedFile().getPath());
-                    Image image = icon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
-                    imageLabel.setIcon(new ImageIcon(image));
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+					ImageIcon icon = new ImageIcon(fileChooser.getSelectedFile().getPath());
+					Image image = icon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+					imageLabel.setIcon(new ImageIcon(image));
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
 			}
 		});
 	}

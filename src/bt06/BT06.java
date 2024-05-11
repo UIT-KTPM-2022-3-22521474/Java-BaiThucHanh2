@@ -47,27 +47,27 @@ public class BT06 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(1, 1, 0, 0));
-		
+
 		DefaultListModel<String> bookModel = new DefaultListModel<>();
-        bookModel.addElement("Văn học");
-        bookModel.addElement("Khoa học");
-        bookModel.addElement("Lịch sử");
-        bookModel.addElement("Công nghệ");
-        bookModel.addElement("Thể thao");
-        bookModel.addElement("Văn hóa");
-        
+		bookModel.addElement("Văn học");
+		bookModel.addElement("Khoa học");
+		bookModel.addElement("Lịch sử");
+		bookModel.addElement("Công nghệ");
+		bookModel.addElement("Thể thao");
+		bookModel.addElement("Văn hóa");
+
 		JList<String> BookList = new JList<>(bookModel);
 		JScrollPane bookScrollPane = new JScrollPane(BookList);
-		contentPane.add(bookScrollPane);	
-		
+		contentPane.add(bookScrollPane);
+
 		JButton SubmitBtn = new JButton("Submit");
 		contentPane.add(SubmitBtn);
-		
-		DefaultListModel<String> selectedModel = new DefaultListModel<>();		
+
+		DefaultListModel<String> selectedModel = new DefaultListModel<>();
 		JList<String> SelectedList = new JList<>(selectedModel);
 		JScrollPane selectedScrollPane = new JScrollPane(SelectedList);
 		contentPane.add(selectedScrollPane);
-		
+
 		SubmitBtn.addActionListener(e -> {
 			selectedModel.clear();
 			for (String book : BookList.getSelectedValuesList()) {

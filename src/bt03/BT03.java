@@ -44,14 +44,14 @@ public class BT03 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
-		
+
 		JTextArea textArea1 = new JTextArea();
 		contentPane.add(textArea1);
-		
+
 		JButton CopyBtn = new JButton("Copy");
-		
+
 		contentPane.add(CopyBtn);
-		
+
 		JTextArea textArea2 = new JTextArea();
 		contentPane.add(textArea2);
 		CopyBtn.addActionListener(new ActionListener() {
@@ -63,7 +63,7 @@ public class BT03 extends JFrame {
 				} else {
 					textArea2.setText("No text selected!");
 				}
-						
+
 			}
 		});
 	}

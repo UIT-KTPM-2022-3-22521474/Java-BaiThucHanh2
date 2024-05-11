@@ -38,14 +38,14 @@ public class BT02 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 90);
 		contentPane = new JPanel();
-		
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));		
+
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		
+
 		JLabel TitleLabel = new JLabel("Phím bạn vừa nhập là: ");
 		contentPane.add(TitleLabel);
-		
+
 		JLabel KeyLabel = new JLabel("");
 		contentPane.addKeyListener(new KeyAdapter() {
 			@Override

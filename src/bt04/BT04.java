@@ -39,27 +39,27 @@ public class BT04 extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		setContentPane(contentPane);		
-		
+		setContentPane(contentPane);
+
 		JButton LeftBtn = new JButton("Trái");
 		contentPane.add(LeftBtn);
-		
+
 		JButton CenterBtn = new JButton("Giữa");
 		contentPane.add(CenterBtn);
-		
+
 		JButton RightBtn = new JButton("Phải");
 		contentPane.add(RightBtn);
-		
+
 		LeftBtn.addActionListener(e -> {
 			contentPane.setLayout(new FlowLayout(FlowLayout.LEFT));
 			contentPane.revalidate();
 		});
-		
+
 		CenterBtn.addActionListener(e -> {
 			contentPane.setLayout(new FlowLayout(FlowLayout.CENTER));
 			contentPane.revalidate();
 		});
-		
+
 		RightBtn.addActionListener(e -> {
 			contentPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			contentPane.revalidate();

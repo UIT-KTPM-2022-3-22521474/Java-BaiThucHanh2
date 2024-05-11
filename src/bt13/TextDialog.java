@@ -40,39 +40,38 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 	JComboBox fonts;
 	JComboBox sizes;
 	Color Color;
-	
+
 	Font font;
-	
-	
+
 	int inputSize;
 	Object inputFont;
-	
+
 	String inputText;
 	Font mainFont;
-	
+
 	TextDialog(Frame owner) {
 		super(owner, "Customize Text", true);
 		this.setResizable(false);
 
 		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		String[] fontList = ge.getAvailableFontFamilyNames();
-		String[] fontSize = {"50","52","53","54","55"};
-		
+		String[] fontSize = { "50", "52", "53", "54", "55" };
+
 		sizes = new JComboBox(fontSize);
 		fonts = new JComboBox(fontList);
-		
+
 		example = new JTextField("Example");
 		example.setHorizontalAlignment(SwingConstants.CENTER);
 		example.setFont(new Font("sanserif", Font.PLAIN, 28));
 		example.setEditable(false);
-		example.setPreferredSize(new Dimension(200,50));
+		example.setPreferredSize(new Dimension(200, 50));
 
 		ok = new JButton("Apply");
 		cancel = new JButton("Cancel");
 		ok.setPreferredSize(cancel.getPreferredSize());
 
 		input = new JTextField("Example");
-		input.setPreferredSize(new Dimension(200,50));
+		input.setPreferredSize(new Dimension(200, 50));
 		input.getDocument().addDocumentListener(new DocumentListener() {
 
 			@Override
@@ -81,13 +80,11 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 				update();
 			}
 
-
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				// TODO Auto-generated method stub
 				update();
 			}
-
 
 			@Override
 			public void changedUpdate(DocumentEvent e) {
@@ -104,7 +101,7 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 		input.addActionListener(this);
 		fonts.addActionListener(this);
 		sizes.addActionListener(this);
-		
+
 		// -----------------
 		// layout components
 		// -----------------
@@ -154,7 +151,7 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 		this.setContentPane(p);
 		this.pack();
 	}
-	
+
 	public Font getFont() {
 		return this.mainFont;
 	}
@@ -162,7 +159,7 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 	public String getText() {
 		return this.inputText;
 	}
-	
+
 	public int getInputSize() {
 		return this.inputSize;
 	}
@@ -183,7 +180,7 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 		else if (source == cancel) {
 			userResponse = CANCEL_OPTION;
 			this.setVisible(false);
-		}else {
+		} else {
 			update();
 		}
 
@@ -207,7 +204,6 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 		// set the font combobox to the current font family name
 
 		// currentColor = c;
-
 
 		// show the dialog
 

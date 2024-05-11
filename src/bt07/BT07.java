@@ -39,30 +39,30 @@ public class BT07 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		
+
 		JRadioButton RedRadioBtn = new JRadioButton("Red");
 		contentPane.add(RedRadioBtn);
-		
+
 		JRadioButton GreenRadioBtn = new JRadioButton("Green");
 		contentPane.add(GreenRadioBtn);
-		
+
 		JRadioButton BlueRadioBtn = new JRadioButton("Blue");
 		contentPane.add(BlueRadioBtn);
-		
+
 		RedRadioBtn.addActionListener(e -> {
 			RedRadioBtn.setSelected(true);
 			GreenRadioBtn.setSelected(false);
 			BlueRadioBtn.setSelected(false);
 			contentPane.setBackground(java.awt.Color.RED);
 		});
-		
+
 		GreenRadioBtn.addActionListener(e -> {
 			RedRadioBtn.setSelected(false);
 			GreenRadioBtn.setSelected(true);
 			BlueRadioBtn.setSelected(false);
 			contentPane.setBackground(java.awt.Color.GREEN);
 		});
-		
+
 		BlueRadioBtn.addActionListener(e -> {
 			RedRadioBtn.setSelected(false);
 			GreenRadioBtn.setSelected(false);

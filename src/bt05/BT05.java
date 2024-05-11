@@ -41,22 +41,22 @@ public class BT05 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		
+
 		JButton TopBtn = new JButton("Trên");
 		contentPane.add(TopBtn, BorderLayout.NORTH);
-		
+
 		JButton LeftBtn = new JButton("Trái");
 		contentPane.add(LeftBtn, BorderLayout.WEST);
-		
+
 		JButton CenterBtn = new JButton("Giữa");
 		contentPane.add(CenterBtn, BorderLayout.CENTER);
-		
+
 		JButton RightBtn = new JButton("Phải");
 		contentPane.add(RightBtn, BorderLayout.EAST);
-		
+
 		JButton BotBtn = new JButton("Dưới");
 		contentPane.add(BotBtn, BorderLayout.SOUTH);
-		
+
 		TopBtn.addActionListener(e -> {
 			TopBtn.setVisible(false);
 			LeftBtn.setVisible(true);
@@ -65,7 +65,7 @@ public class BT05 extends JFrame {
 			BotBtn.setVisible(true);
 			contentPane.revalidate();
 		});
-		
+
 		LeftBtn.addActionListener(e -> {
 			TopBtn.setVisible(true);
 			LeftBtn.setVisible(false);
@@ -74,7 +74,7 @@ public class BT05 extends JFrame {
 			BotBtn.setVisible(true);
 			contentPane.revalidate();
 		});
-		
+
 		CenterBtn.addActionListener(e -> {
 			TopBtn.setVisible(true);
 			LeftBtn.setVisible(true);
@@ -83,7 +83,7 @@ public class BT05 extends JFrame {
 			BotBtn.setVisible(true);
 			contentPane.revalidate();
 		});
-		
+
 		RightBtn.addActionListener(e -> {
 			TopBtn.setVisible(true);
 			LeftBtn.setVisible(true);
@@ -92,7 +92,7 @@ public class BT05 extends JFrame {
 			BotBtn.setVisible(true);
 			contentPane.revalidate();
 		});
-		
+
 		BotBtn.addActionListener(e -> {
 			TopBtn.setVisible(true);
 			LeftBtn.setVisible(true);

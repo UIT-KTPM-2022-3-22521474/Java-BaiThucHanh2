@@ -82,7 +82,7 @@ public class ColorChooser1 extends JPanel implements ActionListener {
 		cc.setFloatable(false);
 		this.frame = frame;
 		this.initializeColorChooser(cc);
-	
+
 		cd = new ColorDialog(frame, primaryColor.getBackground());
 
 		turquoise.addActionListener(this);
@@ -204,7 +204,7 @@ public class ColorChooser1 extends JPanel implements ActionListener {
 		fill.setSelected(false);
 
 		cd = new ColorDialog(frame, primaryColor.getBackground());
-		//panel.setBackground( new Color(44, 62, 80));
+		// panel.setBackground( new Color(44, 62, 80));
 		panel.add(turquoise);
 		panel.add(emerald);
 		panel.add(peter_river);
@@ -250,22 +250,22 @@ public class ColorChooser1 extends JPanel implements ActionListener {
 
 			if (b == custom2) {
 				Color switchs = custom2.getBackground();
-				if (option.getSelectedItem() == PRIMARY_COLOR){
-					
+				if (option.getSelectedItem() == PRIMARY_COLOR) {
+
 					custom2.setBackground(primaryColor.getBackground());
 					primaryColor.setBackground(switchs);
-				}else{
+				} else {
 					custom2.setBackground(secondaryColor.getBackground());
 					secondaryColor.setBackground(switchs);
 				}
 
 			} else if (b == custom3) {
-				if (option.getSelectedItem() == PRIMARY_COLOR){
+				if (option.getSelectedItem() == PRIMARY_COLOR) {
 					Color oldCustom1 = primaryColor.getBackground();
 					primaryColor.setBackground(custom3.getBackground());
 					custom3.setBackground(custom2.getBackground());
 					custom2.setBackground(oldCustom1);
-				}else {
+				} else {
 					Color oldCustom1 = secondaryColor.getBackground();
 					secondaryColor.setBackground(custom3.getBackground());
 					custom3.setBackground(custom2.getBackground());
@@ -294,7 +294,8 @@ public class ColorChooser1 extends JPanel implements ActionListener {
 						custom2.setBackground(secondaryColor.getBackground());
 						secondaryColor.setBackground(cd.currentColor);
 					}
-					System.out.println(cd.currentColor.getRed() + " " + cd.currentColor.getGreen()+ " " + cd.currentColor.getBlue());
+					System.out.println(cd.currentColor.getRed() + " " + cd.currentColor.getGreen() + " "
+							+ cd.currentColor.getBlue());
 				}
 			}
 
