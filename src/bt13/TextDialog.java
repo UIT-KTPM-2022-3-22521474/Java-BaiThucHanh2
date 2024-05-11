@@ -53,7 +53,6 @@ public class TextDialog extends JDialog implements ActionListener, ChangeListene
 	TextDialog(Frame owner) {
 		super(owner, "Customize Text", true);
 		this.setResizable(false);
-		//this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		String[] fontList = ge.getAvailableFontFamilyNames();
